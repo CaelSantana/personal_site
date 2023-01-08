@@ -1,23 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Cael Santana</title>
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 
-  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-
-  <title>Cael Santana</title>
+  <!-- JS -->
+  <script defer src="js/main.js"></script>
 </head>
+
 <body>
-  <section>
-    <div>
-      <h1 class="tag">
-        Aguardem... 2023 lançamento!
-      </h1>
+
+  <header class="header-group bg-dark-medium">
+    <nav class="container mx-auto">
+      <input type="checkbox" id="check">
+      <div class="logo">
+        <a href="#"><img src="img/logo-cael-santana.svg" alt=""></a>
+      </div>
+      <ul id="menu">
+        <li><a href="#aboutme" onclick="slideOut()">Sobre mim</a></li>
+        <li><a href="#service" onclick="slideOut()">Serviços</a></li>
+        <li><a href="#projects" onclick="slideOut()">Projetos</a></li>
+        <li><a href="#experience" onclick="slideOut()">Experiência</a></li>
+        <li><a href="#client" onclick="slideOut()">Clientes</a></li>
+        <li><a href="#contact" onclick="slideOut()">Contato</a></li>
+      </ul>
+      <label for="check" class="checkbtn">
+        <img src="img/menu.png" alt="menu">
+      </label>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section class="bg-dark-medium">
+    <div class="container mx-auto" style="display: flex; justify-content: space-between;">
+      <div class="w-100 center-y">
+        <div>
+          <h1>Olá, sou Cael</h1>
+          <h2>Desenvolvedor Web, UI/UX & Designer</h2>
+          <button class="button">Contate-me</button>
+        </div>
+      </div>
+      <div class="w-100">
+        <img src="./img/cael.jpg" alt="" style="width: 480px; height: 650px;">
+      </div>
     </div>
   </section>
-</body>
-</html>
+
+  <!-- SOBRE MIM -->
+  <section class="bg-dark-light" id="aboutme">
+    <div class="container mx-auto flex space-between">
+      <div class="w-100">
+        <p class="title">Sobre mim</p>
+      </div>
+      <div class="w-100">
+        
+        <p class="description">'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo consequat.</p>
+
+        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nu pariatur excepteur sint occaecat.</p>
+        
+        <div class="center-y">
+          <button class="button mr-24">Ver Trabalhos</button>
+          <button class="button button-secundary">Baixar Currículo</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="bg-dark-medium" id="service">
+    <div class="container mx-auto">
+      <p class="title">Serviços</p>
+      <p class="sub-title">Após anos atuando na área de TI, venho estudando e me atualiazando nas áreas relacionadas.</p>
+
+      <div class="grid grid-cols-2 gap-20">
+        <div class="service-card bg-blue-light">
+          <img src="./img/services/design.svg" alt="">
+          <p class="service-title">Design</p>
+          <p class="service-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
+        </div>
+        <div class="service-card bg-yellow-light">
+          <img src="./img/services/ux-ui.svg" alt="">
+          <p class="service-title">UX/UI</p>
+          <p class="service-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
+        </div>
+        <div class="service-card bg-blue bg-pink">
+          <img src="./img/services/landing-page.svg" alt="">          
+          <p class="service-title">Hotsite</p>
+          <p class="service-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
+        </div>
+        <div class="service-card bg-blue bg-green">
+          <img src="./img/services/development.svg" alt="">
+          <p class="service-title">Desenvolvimento web</p>
+          <p class="service-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
+        </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section class="bg-dark-light" id="projects">
+    <div class="container mx-auto">
+      <p class="title">Últimos projetos</p>
+      <p class="sub-title">Ao longo da carreira, obtive conhecimento em várias áreas, colaborando, prestando serviços, criando e desenvolvendo produtos digitais.</p>
+
+      <div class="grid grid-cols-2 gap-20">
+        
+        <div class="bg-musgo" style=" padding: 60px 80px;">
+          <h2>Cael Santana</h2>
+        </div>
+        <div class="grid grid-cols-2 gap-20">
+          <div class="project-card bg-white">
+            <h2>Cael Santana</h2>
+          </div>
+          <div class="project-card bg-white">
+            <h2>Cael Santana</h2>
+          </div>
+          <div class="project-card bg-blue-medium">
+            <h2>Cael Santana</h2>
+          </div>
+          <div class="project-card bg-yellow-medium">
+            <h2>Cael Santana</h2>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-20">
+          <div class="project-card bg-white">
+            <h2>Cael Santana</h2>
+          </div>
+          <div class="project-card bg-white">
+            <h2>Cael Santana</h2>
+          </div>
+        </div>
+        <div>
+          <div class="project-card bg-green-medium">
+            <h2>Cael Santana</h2>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- EXPERIÊNCIA -->
+  <section class="bg-dark-medium" id="experience">
+    <div class="container mx-auto">
+      <p class="title">Experiências de trabalho</p>
+      <p class="sub-title">Conheça um pouco sobre minha trajetória...</p>
+
+      <div class="grid grid-cols-3">
+        
+        <div class="expience-card border-r-none border-b-none">
+          <p style="color: #747474; margin-bottom: 4px;">Junho de 2014</p>
+          <h2 style="color: #fff; margin-bottom: 4px;">Analista de dados</h2>
+          <!-- <p style="color: #747474; margin-bottom: 20px;">Adobe Inc.</p> -->
+          <p style="color: #9f9f9f;">Me formei em Análise e Desenvolvimento de Sistemas, e desde então venho trabalhando com tecnologia. Tenho
+            vivência em HTML, CSS, responsividade e criação, hoje hotsite é meu carro chefe.</p>
+        </div>
+        
+        <div class="expience-card border-r-none border-b-none">
+          <p style="color: #747474; margin-bottom: 4px;">Janeiro de 2018</p>
+          <h2 style="color: #fff; margin-bottom: 4px;">Minha Empresa</h2>
+          <!-- <p style="color: #747474; margin-bottom: 20px;">Adobe Inc.</p> -->
+          <p style="color: #9f9f9f;">Abri minha empresa e começei a prestar serviços na área de TI.</p>
+        </div>
+        
+        <div class="expience-card border-b-none">
+          <p style="color: #747474; margin-bottom: 4px;">Janeiro de 2019</p>
+          <h2 style="color: #fff; margin-bottom: 4px;">Gerencia</h2>
+          <!-- <p style="color: #747474; margin-bottom: 20px;">Adobe Inc.</p> -->
+          <p style="color: #9f9f9f;">Atuei com UX/UI agregando valores para atuação em sistemas, desenhando fluxos, criando telas,
+            regra de negócio, vivendo e acompanhando usuários no dia a dia, e no fim desse processo tive a oportunidade
+            de gerenciar uma equipe.</p>
+        </div>
+        
+        <div class="expience-card border-r-none">
+          <p style="color: #747474; margin-bottom: 4px;">Janeiro de 2021</p>
+          <h2 style="color: #fff; margin-bottom: 4px;">Desenvolvimento web</h2>
+          <!-- <p style="color: #747474; margin-bottom: 20px;">Adobe Inc.</p> -->
+          <p style="color: #9f9f9f;">Voltei a me conectar com que mais amo, a programação e desde de então venho atuando com front-end,
+            desenvolvendo páginas utilizando HTML, CSS, JS e Vue.</p>
+        </div>
+       
+        <div class="expience-card border-r-none">
+          <p style="color: #747474; margin-bottom: 4px;">Janeiro de 2022</p>
+          <h2 style="color: #fff; margin-bottom: 4px;">Pós Graduação</h2>
+          <!-- <p style="color: #747474; margin-bottom: 20px;">Adobe Inc.</p> -->
+          <p style="color: #9f9f9f;"> Engressei na pós-graduação em Desenvolvimento Web Full Stack na Puc Minas, para complementar tudo o que sei
+            e adquirir mais conhecimentos.</p>
+        </div>
+        
+        <div class="expience-card">
+          <p style="color: #747474; margin-bottom: 4px;">Janeiro de 2023 - atualmente</p>
+          <h2 style="color: #fff; margin-bottom: 4px;">Site</h2>
+          <!-- <p style="color: #747474; margin-bottom: 20px;">Cael Santana</p> -->
+          <p style="color: #9f9f9f;">Lançamento do meu site pessoal. Oferenço serviços que venho prestando em minha trajetória profissional.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-dark-light">
+    <div class="container mx-auto">
+      <p class="title">Tem algum projeto em mente?</p>
+      <div class="center">
+        <button class="button">Contate-me</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTES -->
+  <section class="bg-dark-medium" id="client">
+    <div class="mx-auto">
+      <p class="title">Clientes</p>
+      <p class="sub-title">Empresas que um dia foram clientes e hoje são parceiros</p>
+
+      <div class="grid grid-cols-4">
+        
+        <div style="border: 1px solid #5a5a5a; border-right: none; padding: 75px 40px; background-color: #333333;">
+          <div class="center-y">
+            <img src="./img/client/logo-mcs-business-solutions.png" style="width: 80px;" alt="">
+            <div>
+              <h2 style="color: #fff; margin-bottom: 4px;">Amanda Matos Barros</h2>
+              <p style="color: #747474; margin-bottom: 20px;">Médica Veterinária</p>
+            </div>
+          </div>
+          <p style="color: #9f9f9f;">Uma ótima aculputurista, para seu pet, nossa parceria está na consultaria de alavancar sua marca no mercado.</p>
+        </div>
+        
+        <div style="border: 1px solid #5a5a5a; border-right: none; padding: 75px 40px; background-color: #333333;">
+          <div class="center-y">
+            <img src="./img/client/logo-mcs-business-solutions.png" style="width: 80px;" alt="">
+            <div>
+              <h2 style="color: #fff; margin-bottom: 4px;">MCS Business Solutions</h2>
+              <p style="color: #747474; margin-bottom: 20px;">Tecnologia</p>
+            </div>
+          </div>
+          <p style="color: #9f9f9f;">Se você precisa de app, site ou sistemas, pode contar com está empresa, a anos venho prestando serviços de desenvolvimento.</p>
+        </div>
+
+        <div style="border: 1px solid #5a5a5a; border-right: none; padding: 75px 40px; background-color: #333333;">
+          <div class="center-y">
+            <img src="./img/client/logo-pao-queijo-tradicao.png" style="width: 80px;" alt="">
+            <div>
+              <h2 style="color: #fff; margin-bottom: 4px;">Pão de Queijo Tradição</h2>
+              <p style="color: #747474; margin-bottom: 20px;">Produto</p>
+            </div>
+          </div>
+          <p style="color: #9f9f9f;">Um produto diferenciado, pizza no pão de queijo, tive o prazer em desenvolver o logo desta marca, que é sucesso no mercado.</p>
+        </div>
+        
+        <div style="border: 1px solid #5a5a5a; border-right: none; padding: 75px 40px; background-color: #333333;">
+          <div class="center-y">
+            <img src="./img/client/logo-re9-publicidade.png" style="width: 80px;" alt="">
+            <div>
+              <h2 style="color: #fff; margin-bottom: 4px;">RE9 Publicidade</h2>
+              <p style="color: #747474; margin-bottom: 20px;">Publicidade</p>
+            </div>
+          </div>
+          <p style="color: #9f9f9f;">Propaganda, publicidade seu negócio indo mais longe</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-dark-medium" id="contact">
+    <div class="container mx-auto">
+      <p class="title">Contate-Me</p>
+      <div class="grid grid-cols-3">
+        <div>
+          <p style="font-size: 20px; font-weight: 500; font-family: 'Poppins', sans-serif; color: #ccc; margin-bottom: 30px; margin-top: 5px;">Informações de contato</p>
+          
+          <div style="display: flex; align-items: center; margin-bottom: 48px;">
+            <img src="./img/icons/local.svg" class="mr-12" alt="">
+            <p style="font-size: 16px; font-weight: 500; color: #727b86;">Luiz Migliano, São Paulo</p>
+          </div>
+          
+          <div style="display: flex; align-items: center; margin-bottom: 48px;">
+            <img src="./img/icons/mail.svg" class="mr-12" alt="">
+            <p style="font-size: 16px; font-weight: 500; color: #727b86;">cael.tecnologia@gmail.com</p>
+          </div>
+          
+          <div style="display: flex; align-items: center; margin-bottom: 48px;">
+            <img src="./img/icons/phone.svg" class="mr-12" alt="">
+            <p style="font-size: 16px; font-weight: 500; color: #727b86;">(11) 99594-9151</p>
+          </div>
+
+          <p class="follow">Me siga</p>
+          
+          <div class="center-y">
+            <img src="./img/icons/linkedin.svg" class="mr-12" alt="">
+            <img src="./img/icons/github.svg" alt="">
+          </div>
+        </div>
+
+        <div style="grid-column: span 2 / span 2;">
+          <form action="">
+            
+            <div class="flex-column mb-32">
+              <label for="" class="label">NOME</label>
+              <input type="text" placeholder="Digite seu nome">
+            </div>
+
+            <div class="grid grid-cols-2 gap-20">
+              <div class="flex-column mb-32">
+                <label for="" class="label">NÚMERO DE TELEFONE</label>
+                <input type="text" placeholder="Digite seu número de telefone">
+              </div>
+              
+              <div class="flex-column mb-32">
+                <label for="" class="label">O EMAIL</label>
+                <input type="text" placeholder="Digite seu endereço de e-mail">
+              </div>
+            </div>
+
+            <div class="flex-column mb-32">
+              <label for="" class="label">SUA MENSAGEM</label>
+              <textarea type="text" placeholder="Digite seu endereço de e-mail"  style="height: 180px; color: #777; background-color: #363737; border: none; border-radius: 4px; font-size: 16px; letter-spacing: 1px; font-weight: 500; outline: none; padding: 6px 20px; box-shadow: 0px 3px 4px 0px rgb(0 12 29 / 6%);"></textarea>
+            </div>
+
+            <div class="center-y">
+              <button class="button form">ENVIAR MENSAGEM</button>
+            </div>
+
+            <!-- <div style="width: 100%; display: flex; justify-content: start;">
+              <div style="width: 280px; height: 60px; display: flex; justify-content: center; align-items: center; border-radius: 2px; background-color: #feb633; font-size: 14px; font-weight: 600; color: #fff; margin: auto; cursor: pointer;">ENVIAR MENSAGEM</div>
+            </div> -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-dark-medium">
+    <div class="container mx-auto">
+      <h2 style="font-size: 56px; font-weight: bolder;  text-align: center; color:#feb633; margin-bottom: 48px;">C.</h2>
+      <p style="margin: 0 200px 48px; font-weight: 500; text-align: center; color: rgba(255, 255, 255, 0.3);">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natur</p>
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <div class="center-y">
+          <img src="./img/icons/linkedin.svg" class="mr-12" alt="">
+          <img src="./img/icons/github.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer-templete bg-dark-medium">
+    <p style="color: #727b86;">Copyright © 2018 - Cael Santana - Todos os Direitos Reservados</p>
+  </footer>
