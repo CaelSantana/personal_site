@@ -29,7 +29,7 @@
   --text-white: #32333c;
   --bg-white: #fff;
 
-  --dark-50: #363737;
+  --dark-50: #fff;
   --dark-hard: #fff;
   --dark-light: #fff;
   --dark-medium: #fbfbfb;
@@ -45,18 +45,20 @@
 
   --musgo: #e0e4c3;
 
-  --yellow-light: #fbd339;
-  --yellow-medium: #fedb5d;
-  --yellow: #feb633;
+  --yellow-50: #F7E011;
+  --yellow-100: #FBBC05;
 
   --green-light: #abeae1;
   --green-medium: #1ac283;
 
   --pink: #f648b0;
 
-  --hover-card: #feb633;
+  --hover-card: #F0F0F0;
 
   --label-icon: url("../img/icons/toggle-on.svg");
+
+  --input: 0 5px 5px 0 rgb(233 240 243 / 50%), 0 0 0 1px #e6ecf8;
+  --placeholder: #ccc;
   }
 
 html {
@@ -66,7 +68,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: var(--dark-hard);
+  /* color: var(--dark-hard); */
+  color: #ff0000;
   font-family: 'Poppins-light', 'sans-serif';
 }
 
@@ -90,9 +93,8 @@ body {
   
   --musgo: #e0e4c3;
   
-  --yellow-light: #fbd339;
-  --yellow-medium: #fedb5d;
-  --yellow: #feb633;
+  --yellow-50: #F7E011;
+  --yellow-100: #FBBC05;
   
   --green-light: #abeae1;
   --green-medium: #1ac283;
@@ -102,6 +104,9 @@ body {
   --hover-card: #5a5a5a;
 
   --label-icon: url("../img/icons/toggle-off.svg");
+
+  --input: none;
+  --placeholder: #777;
 }
 
 .mudar-tema {
@@ -124,8 +129,8 @@ body {
 }
 
 section {
-  padding-top: 180px;
-  padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 70px;
   transition-duration: 2s;
 }
 
@@ -145,7 +150,7 @@ section {
   font-weight: 400;
   text-align: center;
   color: var(--grey-extra-light);
-  margin: 0 200px 80px; 
+  margin-bottom: 80px; 
 }
 
 .description {
@@ -188,6 +193,10 @@ h2 {
   gap: 20px;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-white {
   color: var(--text-white);
 }
@@ -212,44 +221,16 @@ h2 {
   background-color: var(--dark-light);
 }
 
-.bg-grey-light {
-  background-color: var(--grey-light);
-}
-
 .bg-dark-medium {
   background-color: var(--dark-medium);
-}
-
-.bg-blue-light {
-  background-color: var(--blue-light);
 }
 
 .bg-blue-medium {
   background-color: var(--blue-medium) !important;
 }
 
-.bg-yellow-light {
-  background-color: var(--yellow-light);
-}
-
-.bg-yellow-medium {
-  background-color: var(--yellow-medium) !important;
-}
-
-.bg-pink {
-  background-color: var(--pink);
-}
-
-.bg-musgo {
-  background-color: var(--musgo);
-}
-
-.bg-green-light {
-  background-color: var(--green-light) !important;
-}
-
-.bg-green-medium {
-  background-color: var(--green-medium) !important;
+.bg-yellow-50 {
+  background-color: var(--yellow-50) !important;
 }
 
 .center {
@@ -297,6 +278,25 @@ h2 {
   width: 100%;
 }
 
+.w-180 {
+  max-width: 180px;
+}
+
+.w-230 {
+  max-width: 230px;
+}
+
+.w-320 {
+  width: 100%;
+  max-width: 320px;
+}
+
+
+.h-150 {
+  max-height: 150px;
+}
+
+
 .w-80 {
   width: 80px;
 }
@@ -336,7 +336,7 @@ h2 {
 }
 
 .mb-20 {
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
 }
 
 .mb-32 {
@@ -347,6 +347,9 @@ h2 {
   margin-bottom: 48px;
 }
 
+a {
+  text-decoration: none;
+}
 
 button {
   height: 60px;
@@ -356,27 +359,27 @@ button {
   align-items: center;
   border: none;
   border-radius: 4px;
-  background-color: var(--yellow);
+  background-color: var(--yellow-100);
   font-size: 18px;
   letter-spacing: 1px;
   color: #fff;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 button:hover {
   opacity: 0.7;
-  transition: 0.5s;
 }
 
 button.button-secundary {
-  color: var(--yellow);
+  color: var(--yellow-100);
   background-color: rgba(255, 255, 255, 0.0);
-  border: 2px solid var(--yellow);
+  border: 2px solid var(--yellow-100);
 }
 
 button.button-secundary:hover {
   color: #fff;
-  background-color: var(--yellow);
+  background-color: var(--yellow-100);
 }
 
 button.form {
@@ -399,10 +402,23 @@ button.form {
 }
 
 /* SOBRE MIM */
+.aboutme-card {
+  width: 100%;
+  max-width: 410px;
+  height: 270px;
+  background-image: url(../img/bg-about-me.png);
+  background-position-x: 0;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+
+.aboutme-buttons {
+  display: flex;
+}
 
 /* SERVICE */
 .service-card {
-  padding: 60px 80px;
+  padding: 20px 30px;
   border-radius: 6px;
 }
 
@@ -433,36 +449,49 @@ button.form {
 }
 
 .service-title {
-  font-size: 32px;
-  color: var(--text-white);
+  font-size: 26px;
+  color: #fff;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
 .service-description {
   font-size: 16px;
-  color: var(--text-white);
+  color: #fff;
   line-height: 28px;
 }
 
 /* PROJECT */
-.project-card {
-  height: 120px;
+.project-card-main {
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
   background-color: var(--bg-white);
-  padding: 60px 80px;
-  box-shadow: 0 0 10px rgb(0 0 0 / 0.09);
+  padding: 50px 70px;
+}
+
+.project-card-one {
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  background-color: var(--bg-white);
+  padding: 50px 70px;
+}
+
+.project-card-double {
+  max-width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: var(--bg-white);
+  padding: 30px 40px;
 }
 
 /* EXPERIENCE */
 .experience-card {
-  border: 1px solid var(--grey);
   padding: 60px 40px;
   background-color: var(--dark-hard);
-  transition-duration: 1s;
-}
-
-.experience-card:hover {
-  background-color: var(--hover-card);
+  box-shadow: var(--input);
+  transition: 3s;
 }
 
 .experience-date {
@@ -482,15 +511,11 @@ button.form {
 }
 
 .client-card {
-  border: 1px solid var(--grey);
   padding: 75px 40px;
   background-color: var(--dark-hard);
   margin-right: -1px;
-  transition-duration: 1s;
-}
-
-.client-card:hover {
-  background-color: var(--hover-card);
+  box-shadow: var(--input);
+  transition: 3s;
 }
 
 /* CONTACT */
@@ -534,7 +559,7 @@ input {
   height: 60px;
   padding: 6px 20px;
   background-color: var(--dark-50);
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   border-radius: 4px;
   outline: none;
   font-family: 'Poppins-Regular';
@@ -542,12 +567,16 @@ input {
   font-size: 16px;
   letter-spacing: 1px;
   color: var(--grey-light);
-  box-shadow: 0px 3px 4px 0px rgb(0 12 29 / 6%);
+  box-shadow: var(--input);
+}
+
+input::placeholder {
+  color: var(--placeholder);
 }
 
 input:hover, input:focus {
   background-color: var(--dark-50);
-  outline:2px solid var(--blue-light);
+  border: 1px solid var(--blue-light);
 }
 
 textarea {
@@ -555,7 +584,7 @@ textarea {
   color:var(--grey-light);
   padding: 20px;
   background-color: var(--dark-50);
-  border: none;
+  border: 1px solid transparent;
   border-radius: 4px;
   font-family: 'Poppins-Regular';
   font-size: 16px;
@@ -563,12 +592,16 @@ textarea {
   letter-spacing: 1px;
   resize: vertical;
   outline: none;
-  box-shadow: 0px 3px 4px 0px rgb(0 12 29 / 6%);
+  box-shadow: var(--input);
+}
+
+textarea::placeholder {
+  color: var(--placeholder);
 }
 
 textarea:hover, textarea:focus {
   background-color: var(--dark-50);
-  outline:2px solid var(--blue-light);
+  border: 1px solid var(--blue-light);
 }
 
 .final-text {
@@ -598,6 +631,35 @@ textarea:hover, textarea:focus {
     padding-left: 10px;
   }
 
+  h1 {
+    font-size: 40px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .aboutme-buttons {
+    display: block;
+  }
+
+  button.b-100 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .experience-card {
+    padding: 30px 20px;
+  }
+
+  .client-card {
+    padding: 30px 20px;
+  }
+
+  input, textarea {
+    font-size: 14px;
+  }
+
   .footer-templete {
     text-align: center;
     padding-left: 40px;
@@ -610,6 +672,10 @@ textarea:hover, textarea:focus {
     max-width: 641px;
     padding-right: 20px;
     padding-left: 20px;
+  }
+
+  .service-title {
+    font-size: 32px;
   }
 }
 
@@ -629,11 +695,41 @@ textarea:hover, textarea:focus {
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  section {
+    padding-top: 180px;
+    padding-bottom: 100px;
+    transition-duration: 2s;
+  }
+
+  .sub-title {
+    margin: 0 200px 80px; 
+  }
   
   .home-card-group, .aboutme-card-group, .service-card-group, .project-card-group {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
+  }
+
+  .service-card {
+    padding: 60px 80px;
+    border-radius: 6px;
+  }
+
+  .project-card-main {
+    max-width: 590px;
+    height: 590px;
+  }
+
+  .project-card-one {
+    max-width: 285px;
+    height: 285px;
+  }
+
+  .project-card-double {
+    max-width: 590px;
+    height: 285px;
   }
 
   .experience-card-group {
