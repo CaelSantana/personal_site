@@ -59,6 +59,8 @@
 
   --input: 0 5px 5px 0 rgb(233 240 243 / 50%), 0 0 0 1px #e6ecf8;
   --placeholder: #ccc;
+
+  --footer: #eee;
   }
 
 html {
@@ -105,8 +107,10 @@ body {
 
   --label-icon: url("../img/icons/toggle-off.svg");
 
-  --input: none;
+  --input: 0 0px 0px 0 rgb(233 240 243 / 50%), 0 0 0 1px #777;;
   --placeholder: #777;
+
+  --footer: #2b2c2c;
 }
 
 .mudar-tema {
@@ -231,6 +235,10 @@ h2 {
 
 .bg-yellow-50 {
   background-color: var(--yellow-50) !important;
+}
+
+.bg-footer {
+  background-color: var(--footer);
 }
 
 .center {
@@ -516,6 +524,7 @@ button.form {
   margin-right: -1px;
   box-shadow: var(--input);
   transition: 3s;
+  border: 1px solid var(--input);
 }
 
 /* CONTACT */
@@ -619,7 +628,7 @@ textarea:hover, textarea:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid var(--dark-50);
   font-size: 14px;
   transition-duration: 2s;
 }
@@ -676,6 +685,10 @@ textarea:hover, textarea:focus {
 
   .service-title {
     font-size: 32px;
+  }
+
+  .lg-mr-20 {
+    margin-right: 20px;
   }
 }
 
