@@ -26,6 +26,8 @@
 }
 
 :root {
+  --bg-home-img: url('../img/bg-profile.svg');
+
   --text-white: #32333c;
   --bg-white: #fff;
 
@@ -76,6 +78,8 @@ body {
 }
 
 .dark-mode {
+  --bg-home-img: none;
+
   --text-white: #fff;
   --bg-white: #fff;
 
@@ -215,6 +219,15 @@ h2 {
 
 .text-grey-light {
   color: var(--grey-light);
+}
+
+.bg-home-img {
+  width: 100%;
+  background-image: var(--bg-home-img);
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  transition: 2s;
 }
 
 .bg-white {
@@ -406,7 +419,6 @@ button.form {
   width: 100%;
   max-width: 480px;
   height: auto;
-  margin-bottom: 32px;
 }
 
 /* SOBRE MIM */
